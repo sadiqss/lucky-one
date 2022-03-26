@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import Country from '../Country/Country';
 import './Countries.css';
 
 const Countries = () => {
     const [countries, setCountries] = useState([])
     useEffect(() => {
-        fetch('products.json')
+        fetch('countries.json')
             .then(res => res.json())
-            .then(data => console.log(data))
-    }, [])
+            .then(data => setCountries(data))
+    }, []);
     return (
         <div className='travel-container'>
             <div className="countries-container">
-                <h2>This is list</h2>
+                {
+                    countries.map(country => <Country
+                        key={country.id}
+                        country={country}
+                    ></Country>)
+                }
             </div>
             <div className="your-list">
                 <h4>Your list</h4>
