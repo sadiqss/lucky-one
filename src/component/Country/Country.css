@@ -1,13 +1,26 @@
 .country img{
 width: 286px;
 height: 286px;
+border:1px solid yellowgreen;
 }
 .country{
     width:300px;
     height:510px;
+    margin: 7px;
 }
 .country-name{
     font-weight: 400;
     font-size: 21px;
     line-height: 25px;
+}
+.country-info{
+    margin: 14px;
+}
+.btn-list{
+    width: 100%;
+    background-color: bisque;
+    border:0;
+}
+.btn-list:hover{
+    background-color: orange;
 }

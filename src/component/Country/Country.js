@@ -6,7 +6,13 @@ const Country = (props) => {
     return (
         <div className='country'>
             <img src={img} alt="" />
-            <p className='country-name'>Destination:{name}</p>
+            <div className='country-info'>
+                <p className='country-name'>Destination:{name}</p>
+                <p>Continent:{continent}</p>
+            </div>
+            <button className='btn-list'>
+                <p>Add to your List</p>
+            </button>
         </div>
     );
 };
