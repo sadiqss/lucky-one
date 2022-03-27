@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Country from '../Country/Country';
+import FavouriteList from '../FavouriteList/FavouriteList';
 import './Countries.css';
 
 const Countries = () => {
@@ -28,8 +29,7 @@ const Countries = () => {
                 }
             </div>
             <div className="your-list">
-                <h4>Your list</h4>
-                <p>{list.length}</p>
+                <FavouriteList list={list}></FavouriteList>
             </div>
         </div>
     );
